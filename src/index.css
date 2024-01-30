@@ -6,6 +6,16 @@ html, body {
   height: 100%;
 }
 
+html
+{
+  scroll-snap-type: y mandatory;
+}
+
+section{
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 #root{
   height: 100%;
 }
@@ -38,6 +48,16 @@ font-family: 'Source Sans 3', sans-serif;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.series-b
+{
+  background-image: url('../public/images/series_b.jpg');
+}
+
+.plug-and-play
+{
+  background-image: url('../public/images/plug_and_play.jpg');
 }
 
 .link{
@@ -80,8 +100,8 @@ cursor: pointer;
 .top-content
 {
   text-align: center;
-  font-size: x-large;
-  color: rgb(255, 255, 255);
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.925);
 }
 
 .button
@@ -115,3 +135,112 @@ cursor: pointer;
   color: rgb(192, 192, 192);
 }
 
+.navbar
+{
+  padding: 11px 0px;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.navbar > .logo
+{
+  margin-left:30px;
+  letter-spacing: 20px;
+  color: rgb(233, 233, 233);
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.navbar > .logo:hover
+{
+  cursor: pointer;
+  transform: scale(105%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar > .content
+{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar a
+{
+  font-size: larger;
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(250, 250, 250);
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+
+.navbar a:hover
+{
+  background-color: rgba(121, 121, 121, 0.651);
+}
+
+.navbar > .support
+{
+  display: flex;
+  margin-left: 0;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.navbar > .support > span
+{
+  color: rgb(22, 22, 22);
+  margin: 0px 10px;
+  font-weight: 300;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.navbar >.support > span:hover
+{
+  background-color: rgba(31, 31, 31, 0.123);
+  cursor: pointer;
+}
+
+.mini-menu
+{
+  position: absolute;
+  top: 0;
+  padding-top: 60px; 
+  z-index: -2;
+  background-color: #c9c8bbe7
+}
+
+.page {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.page.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plug-and-play
+{
+  filter: brightness(0.85);
+}
+
+.darken h1
+{
+  font-size: 50px;
+}
+
+.darken h2
+{
+  font-size: 45px;
+}
